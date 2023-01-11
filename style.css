@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+@font-face {
+    font-family: DuneFont;
+    src: url(./Dune-Rise-Font/Dune_Rise.otf);
+}
+
+.body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d1c6f065;
+}
+.buttonOuter{
+    height: 40px;
+    width: auto;
+    position: relative;
+    padding: 15px 30px 0 30px;
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: 900;
+    background-color: #fff;
+    font-family: 'DuneFont';
+    color: black;
+    border: 2px solid black;
+    text-decoration: none;
+}
+.buttonOuter:hover{
+    letter-spacing: 10px;
+    transition: .5s ease-in-out ;
+}
+/* .button{
+    position: relative;
+
+} */
+
+.movingElement{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+.movingElement::before{
+    content:'';
+    position: absolute;
+    top: -8px;
+    left: 80%;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(103, 103, 207);
+    transition: 0.5s;
+}
+.buttonOuter:hover .movingElement::before{
+    width: 25px;
+    left: 10%;
+}
+.movingElement::after{
+    content:'';
+    position: absolute;
+    bottom: -8px;
+    right: 80%;
+    height: 15px;
+    width: 15px;
+    background-color: rgba(103, 103, 207);
+    transition: 0.5s;
+}
+.buttonOuter:hover .movingElement::after{
+    width: 25px;
+    right: 10%;
+}
